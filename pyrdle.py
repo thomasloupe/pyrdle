@@ -57,6 +57,7 @@ def main_loop():
                     characters_in_chosen_word.append(letter)
         # Let the player know about a letter that exists in the chosen word.
         if len(characters_in_chosen_word) != 0:
+            print ("\n")
             for char in characters_in_chosen_word:
                 print ("The letter", char, "is in the word!")
         # Let the player know if no letters in their word were found in the chosen word.
