@@ -43,17 +43,20 @@ def main_loop():
         # random word and see if there's any matches in letters.
         # Take away one guess.
         guesses -= 1
+        # Create empty list to store letters in.
         characters_in_chosen_word = []
-        
+        # Check if any letter exists in the chosen word and if so, add it to the list once.
         for letter in prompt:
             if letter in chosen_word:
                 if letter in characters_in_chosen_word:
                     pass
                 else:
                     characters_in_chosen_word.append(letter)
+        # Let the player know about a letter that exists in the chosen word.
         if len(characters_in_chosen_word) != 0:
             for char in characters_in_chosen_word:
                 print ("The letter", char, "is in the word!")
+        # Let the player know if no letters in their word were found in the chosen word.
         else:
             print("None of the letters are in the word.")
                 
