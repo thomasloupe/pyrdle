@@ -1,7 +1,7 @@
 import random
 import enchant
 
-# Set Dictionary for word checking.
+# Set dictionary for word checking.
 d = enchant.Dict("en_US")
 # Set the default word string to nothing.
 chosen_word = ""
@@ -28,7 +28,7 @@ def main_loop():
             print("That word isn't 5 characters!")
             return
         # If the word isn't actually in the English dictionary, don't count this as a guess.
-        elif d.check(prompt) != True:
+        if d.check(prompt) != True:
             print ("That's not a word.")
             return
         # Set up a variable so we can see how many letters matched, if any.
