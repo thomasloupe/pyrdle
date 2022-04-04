@@ -16,7 +16,7 @@ def main_loop():
     guesses -= 1
     # Check if we ran out of guesses first and act accordingly.
     if guesses >= 0:
-        print ("Guess the six letter word! You have", guesses, "guesses left...")
+        print ("\nGuess the five letter word! You have", guesses, "guesses left...")
         # Read the user's input
         prompt = input()
         # Set up a variable so we can see how many letters matched, if any.
