@@ -19,7 +19,7 @@ def main_loop():
     if guesses == 6:
         print ("\nGuess the word. You have six attempts to guess it correctly. Good luck!")
     elif guesses >= 1 and guesses < 6:
-        print ("\n", guesses, "tries left...")
+        print ("\n",guesses, "tries left...")
     elif guesses == 0:
         print ("\nThis is your last chance. Good luck!")
         # End the game when we run out of guesses.
