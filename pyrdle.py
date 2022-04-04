@@ -13,19 +13,23 @@ def main_loop():
     # Access the global variable.
     global guesses
     # Take away one guess.
-    guesses -= 1
     # Check if we ran out of guesses first and act accordingly.
     if guesses >= 0:
         print ("\nGuess the five letter word! You have", guesses, "guesses left...")
         # Read the user's input
-        prompt = input()
+        prompt = input().strip().casefold()
+        # If the length of the word isn't 5 characters, return.
+        if len(prompt) != 5:
+            print("That word isn't 5 characters!")
+            return
         # Set up a variable so we can see how many letters matched, if any.
         matched_letters = 0
-        if prompt == chosen_word:
+        if prompt.casefold().strip() == chosen_word.casefold().strip():
             print("YOU WIN!!!")
         else:
             # Enter a for loop that checks each letter the user chose against each letter in the chosen 
             # random word and see if there's any matches in letters
+            guesses -= 1
             for letter in chosen_word:
                 for each_letter in prompt:
                     if each_letter == letter:
