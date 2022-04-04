@@ -18,7 +18,7 @@ def main_loop():
         print ("\nGuess the five letter word! You have", guesses, "guesses left...")
         # Read the user's input
         prompt = input().strip().casefold()
-        # If the length of the word isn't 5 characters, return.
+        # If the length of the word isn't 5 characters, return. This also fixes the "pick every character cheat"
         if len(prompt) != 5:
             print("That word isn't 5 characters!")
             return
