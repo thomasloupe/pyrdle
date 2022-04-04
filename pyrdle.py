@@ -16,7 +16,9 @@ def main_loop():
     # Access the global variable.
     global guesses
     # Check if we ran out of guesses first and act accordingly.
-    if guesses >= 1:
+    if guesses == 6:
+        print ("\nGuess the word. You have six attempts to guess it correctly. Good luck!")
+    elif guesses >= 1 and guesses < 6:
         print ("\n", guesses, "tries left...")
     elif guesses == 0:
         print ("\nThis is your last chance. Good luck!")
