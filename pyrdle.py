@@ -17,8 +17,10 @@ def main_loop():
     global guesses
     # Take away one guess.
     # Check if we ran out of guesses first and act accordingly.
-    if guesses >= 0:
+    if guesses >= 1:
         print ("\nGuess the five letter word! You have", guesses, "guesses left...")
+    elif guesses == 0:
+        print ("\nThis is your last guess. Good luck!")
         # Read the user's input
         prompt = input().strip().casefold()
         # If the length of the word isn't 5 characters, return. This also fixes the "pick every character cheat"
