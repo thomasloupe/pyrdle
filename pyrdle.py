@@ -62,6 +62,7 @@ def main_loop():
                 print ("The letter", char, "is in the word!")
         # Let the player know if no letters in their word were found in the chosen word.
         else:
+            print ("\n")
             print("None of the letters are in the word.")
                 
 
