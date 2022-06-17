@@ -66,6 +66,6 @@ def main_loop():
             print("None of the letters are in the word.")
                 
 
-# Start the loop and only break when we're at negative guesses
+# Start the loop and only break when we're at negative guesses.
 while guesses < 7 and guesses >= -1:
     main_loop()
