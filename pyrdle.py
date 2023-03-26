@@ -11,7 +11,6 @@ guesses = 6
 
 # Choose the word from the text file provided.
 chosen_word = random.choice(open("words_alpha.txt").readlines())
-print(chosen_word)
 
 
 def main_loop():
