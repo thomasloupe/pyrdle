@@ -11,6 +11,7 @@ guesses = 6
 
 # Choose the word from the text file provided.
 chosen_word = random.choice(open("words_alpha.txt").readlines())
+print(chosen_word)
 
 
 def main_loop():
@@ -67,19 +68,21 @@ def main_loop():
         # Let the player know about a letter that exists in the chosen word.
         if len(characters_in_chosen_word) != 0:
             print("\n")
+            # Let the player know about a letter that is correctly placed in the chosen word.
+            if len(correctly_placed_letters) != 0:
+                for char in correctly_placed_letters:
+                    print(
+                        "The following letter is in the word and in the correct position: %s"
+                        % (char))
             for char in characters_in_chosen_word:
-                print("The letter", char, "is in the word!")
+                if char not in correctly_placed_letters:
+                    print("The letter", char, "is in the word!")
         # Let the player know if no letters in their word were found in the chosen word.
         else:
             print("\n")
             print("None of the letters are in the word.")
-        # Let the player know about a letter that is correctly placed in the chosen word.
-        if len(correctly_placed_letters) != 0:
-            print("\n")
-            print("The following letters are in the correct position:")
-            for char in correctly_placed_letters:
-                print(char)
 
-# Start the loop and only break when we're at negative guesses.
+
+#Start the loop and only break when we're at negative guesses.
 while guesses < 7 and guesses >= -1:
     main_loop()
