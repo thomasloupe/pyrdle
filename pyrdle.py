@@ -28,8 +28,9 @@ def main_loop():
         print("\nThis is your last chance. Good luck!")
         # End the game when we run out of guesses.
     elif guesses < 0:
-        print("\nThe word was",
-              chosen_word + ". - https://www.youtube.com/watch?v=_asNhzXq72w")
+        print("\nThe word was" + chosen_word + ".")
+        print("https://www.youtube.com/watch?v=_asNhzXq72w")
+        time.sleep(10)
         quit()
     # Read the user's input
     prompt = input().strip().casefold()
