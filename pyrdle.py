@@ -80,7 +80,6 @@ def main_loop():
             for char in correctly_placed_letters:
                 print(char)
 
-
 # Start the loop and only break when we're at negative guesses.
 while guesses < 7 and guesses >= -1:
     main_loop()
